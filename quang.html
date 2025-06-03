@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web giới thiêụ bản thân</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0;
+            transition: all 0.3s ease;
+            color: black;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            text-decoration: none;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            height: 50px;
+            background-color: white;
+        }
+
+        ul li :hover {
+            color: rgb(90, 184, 247);
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #Me {
+            display: flex;
+            padding-top: 100px;
+            padding-bottom: 20px;
+            background-image: url("https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/474081JqG/background-xanh-duong-dep-nhat_094945924.jpg");
+            background-position: right;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+        }
+
+        #me-left {
+            width: 60%;
+            font-size: 1rem;
+        }
+
+        #me-left strong {
+            color: rgb(90, 184, 247);
+        }
+
+        #Me img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+
+        #me-left a {
+            display: inline-block;
+            width: 120px;
+            height: 20px;
+            border-radius: 5px;
+            background-color: rgb(90, 184, 247);
+            color: white;
+            border: 1px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            padding: 10px 10px;
+            text-align: center;
+
+        }
+
+        #me-left a:hover {
+            background-color: white;
+            color: rgb(90, 184, 247);
+            border: 2px rgb(90, 184, 247) solid;
+
+        }
+
+        #me-right {
+            margin: auto;
+        }
+
+        .media {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            padding: 30px 25px;
+            border: 2px rgb(90, 184, 247) solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+
+        }
+
+        #Contact {
+            display: flex;
+            background-color: rgb(112 215 245);
+            border-radius: 10px;
+            padding: 20px 20px 20px 50px;
+        }
+
+        .left {
+            width: 50%;
+        }
+
+        .left h3 {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .right {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .button {
+            font-size: 1rem;
+            border-radius: 10px;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #email {
+            background-color: white;
+            border: 0;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #email:hover {
+            transform: translateY(-5px);
+        }
+
+        #git {
+            border: 2px white solid;
+            background-color: rgba(0, 255, 255, 0);
+            color: white;
+        }
+
+
+
+        #git:hover {
+            background-color: white;
+            color: black;
+            border: 2px black solid;
+            font-weight: bold;
+            transform: translateY(-5px)
+        }
+
+        footer {
+            display: flex;
+            gap: 50px;
+            font-size: 1.2rem;
+            justify-content: space-around;
+        }
+
+        .timeline_item {
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-color: #EBF0F2;
+            padding-bottom: 0.5625rem;
+            padding-left: 1.375rem;
+            position: relative;
+        }
+
+        .timeline_item::before {
+            content: '';
+            background-color: #304CFD;
+            box-shadow: 0 0 0 0.1875rem rgba(48, 76, 253, 0.25);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: -0.3125rem;
+            height: 0.625rem;
+            width: 0.625rem;
+        }
+
+        .timeline_item h5 {
+            font-size: 1.2rem;
+            position: relative;
+            top: -10px;
+        }
+
+        .timeline_item span {
+            color: #818283;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+
+        <ul>
+            <li><a href="nhom_5_fitx.html">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Hobby</a></li>
+        </ul>
+    </nav>
+    <section id="Me">
+        <div id="me-left">
+            <h5 style="margin-bottom: 10px;">Hey</h5>
+            <p style="font-size: 1.5rem;">I'm <strong>Minh Quang</strong>,</p>
+            <p style="margin-bottom: 30px;font-size: 1.5rem;">I'm studying at <strong>NEU</strong></p>
+            <p style="margin-bottom: 10px;">
+                As a sophomore looking for an internship, I am eager to contribute my skills and enthusiasm to your
+                company. I am a quick learner, hardworking, and always open to new challenges. As an intern, I can
+                assist with research, data entry, and administrative tasks to help the team stay organized. I have basic
+                knowledge of IT, and I am willing to learn more by working on real-world projects. I'm really excited to
+                work for your company</p>
+            <h3 class="media">Social media: </h3>
+            <a href="#">Download CV</a>
+
+        </div>
+        <div id="me-right">
+            <img src="https://scontent.fhan2-4.fna.fbcdn.net/v/t1.15752-9/494687208_1196141282066108_7337079883362923071_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeH4qfjGiaWpCn1egqQqxRu5UvhsDdEg6S9S-GwN0SDpL2bi_dpKpblZCNJrFbuFnj19ZSFXWZpa82LwVgHwmleT&_nc_ohc=B-VkNz_93xgQ7kNvwGRuthk&_nc_oc=AdkrR63wNV9rYRWvkjprbuAGpGplYQlTm47qDvoj6zlhkItXzq7EVLqSpuKE83g351u-lSOtcO2a2Z1MI-96lakz&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fhan2-4.fna&oh=03_Q7cD2QGK2en5eEP4RbCZSctpexqYVrEmSCet3OOiffdyEC2IIg&oe=6860FAB5"
+                alt="">
+        </div>
+
+    </section>
+
+    <!-- <section id="Inf">
+        <h1>Personal Information</h1>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <td>Nguyễn Minh Quang</td>
+            </tr>
+            <tr>
+                <th>Ngày sinh</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Quê quán</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>email</th>
+                <td></td>
+            </tr>
+        </table>
+    </section> -->
+    <section id="Education">
+        <h1>Education</h1>
+        <article class="timeline_item">
+            <h5>National Economics University</h5>
+            <span>2020 — now</span>
+        </article>
+    </section>
+    <section id="Hobby">
+        <h1>Hobby</h1>
+        <div class="container">
+            <div class="card">
+                <h3>Bóng đá</h3>
+                <img src="https://img.lovepik.com/png/20231001/cartoon-black-and-white-football-logo_50410_wh1200.png"
+                    alt="" height="100px" width="100px">
+            </div>
+            <div class="card">
+                <h3>Code</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" fill="currentColor"
+                    class="bi bi-keyboard" viewBox="0 0 16 16">
+                    <path
+                        d="M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
+                    <path
+                        d="M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25z" />
+                </svg>
+            </div>
+            <div class="card">
+                <h3>Cờ tướng</h3>
+                <img src="https://png.pngtree.com/element_our/20200701/ourmid/pngtree-wooden-chess-image_2276856.jpg"
+                    alt="" height="100px" width="100px">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="Contact">
+            <div class="left">
+                <h3>Interested</h3>
+                <h3>working</h3>
+                <h3>with me?</h3>
+            </div>
+            <div class="right">
+                <a href="mailto:your@email.com" id="email" class="button"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="1.5rem" height="1.5rem" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                    </svg> Email Me</a>
+                <a href="https://github.com/yourprofile" id="git" class="button">See more Projects</a>
+            </div>
+        </div>
+
+
+    </section>
+    <hr style="color: black ;">
+    <footer>
+        <div><strong>Personal email: </strong></div>
+        <div><strong>Phone numbers: </strong></div>
+        <div><strong>Git link: </strong></div>
+    </footer>
+
+</body>
+
+</html>
